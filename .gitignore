@@ -16,6 +16,13 @@
 !/log/.keep
 /tmp
 
+# Ignore public assets from precompilation
 /public/assets
+
+# Ignore RubyMine files
 .idea
+
+# Ignore NPM packages
+node_modules
+npm-debug.log
 

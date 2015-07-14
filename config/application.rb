@@ -22,5 +22,11 @@ module ReactStarterApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Make public assets requireable in manifest files
+    config.assets.paths << Rails.root.join('tmp', 'assets', 'css')
+    config.assets.paths << Rails.root.join('tmp', 'assets', 'js')
+
+    config.react.component_filenames = [Rails.root.join('tmp', 'assets', 'js', 'bundle.js')]
   end
 end
