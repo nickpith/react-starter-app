@@ -1,28 +1,43 @@
-== README
+# React Starter App
+## Introduction
+The purpose of this starter app is to provide a base project for how to integrate CommonJS, React and Flux with Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+* Clone project and run the following command from inside the project directory
+```
+bundle install
+```
 
-Things you may want to cover:
+* Install javascript dependencies and run the initial build of the JS assets
+```
+npm install
+```
 
-* Ruby version
+## Running App
 
-* System dependencies
+There are 2 parts to running the app.
 
-* Configuration
+1. Start up the Rails server
+```
+rails s
+```
+2. Run gulp to monitor your JS and assets
+```
+gulp
+```
 
-* Database creation
+## Releasing
 
-* Database initialization
+1. Install NodeJS and NPM on Jenkins server
 
-* How to run the test suite
+2. Run `npm install` before running `rake deploy` on build server
 
-* Services (job queues, cache servers, search engines, etc.)
+## Deploying
 
-* Deployment instructions
+1. Include [react_app_cookbook] on run_list for node
 
-* ...
+2. Set [nodejs] attributes on node's environment file to configure the NodeJS and NPM version
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[react_app_cookbook]: http://github.com/nickpith/react_app_cookbook
+[nodejs]: https://github.com/redguide/nodejs
