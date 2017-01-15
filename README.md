@@ -13,6 +13,10 @@ bundle install
 npm install
 ```
 
+
+
+# Test
+
 ## Running App
 
 There are 2 parts to running the app.
